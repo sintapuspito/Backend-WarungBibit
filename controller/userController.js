@@ -122,7 +122,7 @@ const postUser = async (req, res) => {
         email,
         ...rest,
         password: hashPassword,
-        role
+        role: role ? role : 'user'
       })
 
       res.status(201).json({
